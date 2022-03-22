@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IJSE</title>
+    <link rel="stylesheet" href="CSS/reset.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Roboto+Slab:wght@700&display=swap');
+        *{
+            box-sizing: border-box;
+            font-family: 'Roboto Slab', sans-serif;
+        }
+        .clearfix{
+            clear: both;
+        }
+        header{
+            background-color: white;
+            height: 55px;
+            position: fixed;
+            width: 100%;
+            top: 0%;
+            left: 0%;
+            z-index: 2;
+        }
+        main{
+            background-color: white;
+            width: 100%;
+            border-top: 55px;
+
+
+        }
+        footer{
+            background-color: black;
+
+            color: aliceblue;
+        }
+        #img-logo{
+            position: relative;
+            height: 50px;
+            float: right;
+            top: 50%;
+            transform: translateY(-50%) ;
+        }
+        #social-icon{
+            /* background-color: green; */
+            position: absolute;
+            right: 200px;
+            height: 25px;
+            width: 250px;
+            font-size: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        ion-icon{
+            width: 30px;
+            color: darkslategray;
+        
+        }
+        #nav{
+            /* background-color: green; */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #nav div{
+            display: inline-block;
+            font-size: 0.75rem;
+            margin: 10px;
+            
+        }
+        #nav :hover{
+            color: red;
+            text-decoration: solid;
+        }
+        #programs:hover ~ #down-list{
+            display: block;
+            background-color: yellow;
+        }
+        #programs::after{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            /* background-color: red; */
+            /* width: 20px;
+            height: 20px; */
+
+            border: 6px solid ;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color:transparent;
+            border-left-colors: transparent;
+
+        }
+        #down-list{
+            width: 95%;
+            height: 250px;
+            background-color: white;
+            position: absolute;
+            top: 55px;
+            left: 30px;
+            border: 1px solid lightgray;
+            border-top: 1px solid red;
+            display: none;
+            
+        }
+        #down-list #div-1 div{
+            /* background-color: red; */
+            display: inline-block;
+            border: 2px solid black;
+            width: 160px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        #down-list #div-1 div:hover{
+            background-color: black;
+            color: white;
+        }
+        #down-list #div-1{
+            /* background-color: blue; */
+            position: absolute;
+            top: 50px;
+            left: 200px;
+
+        }
+        #down-list #div-2{
+            position: absolute;
+            top: 100px;
+            left: 150px;
+        }
+        #down-list #div-2 a div{
+            width: 200px;
+            margin: 25px;
+            display: inline-block;
+        }
+        #down-list #div-2 a div:hover{
+            border-top: 2px solid yellow;
+        }
+        
+        #down-list #div-2 a div img{
+            width: 150px;
+        }
+
+
+        #social-icon :hover{
+            background-color: lightgray;
+        }
+
+        #main-div2{
+            position: relative;
+            height: 500px;
+        }
+
+
+        #content{
+            width: 60%;
+            text-align: center;
+            margin: 50px;
+        }
+        #content-image{
+            position: absolute;
+            bottom: 50px;
+            right: 30px;
+
+        }
+        #content-image img{
+            border-radius: 30px;
+        }
+        #content :first-child{
+            font-size: 2rem;
+            padding: 10px;
+        }
+        #content p{
+            color: gray;
+            padding: 10px;
+        }
+        #img-call{
+            position: fixed;
+            width: 75px;
+            bottom: 50px;
+            right: 20px;
+            border-radius: 100px;
+        }
+        h1{
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px;
+            margin-bottom: 20px;
+        }
+        #main2{
+            background-color: rgb(128,0,0);
+        }
+        #main2 img{
+            width: 350px;
+            height: 300px;
+            margin: 30px;
+            border: 2px solid red;
+        }
+        #main2 img:hover{
+            border: 2px solid yellow;
+            display: -moz-popup;
+        }
+
+        footer div{
+            display: inline-block;
+            width: 280px;
+        }
+        footer div p{
+            font-size: 0.7rem;
+            text-align: center;
+            margin: 20px;
+        }
+        footer div :first-child{
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin: 20px;
+        }
+
+        @media all and (min-width: 992px) and (max-width: 1200px) {
+            #social-icon{
+            background-color: green;
+            position: absolute;
+            top: 55px;
+
+        }
+        }
+        
+
+
+        
+
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <img id="img-logo" src="image/ijse.png" alt="Picture">
+
+        <div id="nav">
+            <a href=""><div>HOME</div></a>
+            <a href=""><div id="programs">PROGRAMES . </div></a>
+            <a href=""><div>DISCOVER IJSE</div></a>
+            <a href=""><div>LIFE @ IJSE</div></a>
+            <a href=""><div>VIDEO GALLERY</div></a>
+            <a href=""><div>CONTACT US</div></a>
+        </div>
+        <div id="down-list">
+            <div id="div-1">
+                <div>All</div>
+                <div>Graduate</div>
+                <div>Undergraduate</div>
+                <div>After AL</div>
+                <div>IT Professional</div>
+            </div>
+            <div id="div-2">
+                <a href=""><div>
+                    <img src="image/dep-logo.png" alt="PICTURE">
+                    <P>Direct Entry Program</P>
+                </div></a>
+                <a href=""><div>
+                    <img src="image/cmjd-professional.png" alt="PICTURE">
+                    <P>CMJD Professional</P>
+                </div></a>
+                <a href=""><div>
+                    <img src="image/graduate-diploma-in-software-engineering.png" alt="PICTURE">
+                    <P>graduate diploma in software engineering</P>
+                </div></a>
+                <a href=""><div>
+                    <img src="image/RMAD.png" alt="PICTURE">
+                    <P>rapid Mobile Application Developer</P>
+                </div></a>
+
+            </div>
+        </div>
+
+        <div id="social-icon">
+            <a href="https://www.facebook.com/ijse.lk/" target="blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.linkedin.com/company/institute-of-software-engineering" target="blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://twitter.com/ijse_official" target="blank"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://www.instagram.com/ijse_official/" target="blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://www.youtube.com/channel/UCIUyGBwGEadUqBkKkinonGQ/" target="blank"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href=""><ion-icon name="call-outline"></ion-icon></a>
+            <a href="contact@ijse.lk" target="blank"><ion-icon name="mail-outline"></ion-icon></a>
+        </div>
+
+
+    </header>
+    <main>
+        <div id="main-div1"><img src="image/home.jpg" alt="PICTURE"></div>
+        <div></div>
+        <div id="main-div2">
+            <div id="content">
+                <h1>Welcome to IJSE</h1>
+                <p>The Home of Software Engineering in Sri Lanka</p>
+                <p>Our mission being “Contributing most capable and reliable software engineers with profound knowledge in most recent technologies who can match up to demands of ever-evolving IT industry”, IJSE has contributed more than 4300 skillful IT professionals occupying many eminent positions in numerous reputed companies in Sri Lanka. IJSE, being one of the leading IT education providers in Sri Lanka has been focusing on enhancing the skills and attitudes which are desperately sought by the IT industry ever since its inception in 2006 with our most exquisite Software Engineering courses in Sri Lanka.</p>
+                <p> Considering the rapidly evolving technology, advancing in the IT industry and obtaining a degree in software engineering from IJSE will expose you to many possibilities that can lead you to a bright future. Distinguished as the only Oracle authorized training center in Sri Lanka, regardless of whether you are an after A/L student, an Undergraduate, Graduate or an IT Professional, IJSE offers a variety of programs in computing. Due to its unique Software Engineering courses and Training programs, IJSE is undoubtedly the best place to start your IT career in Software Industry. With our Software Engineering courses and degree programs, IJSE is guaranteed to provide you with a solid foundation for you to obtain a stable foothold for your future job. </p>
+        
+            </div>
+        
+
+            <div id="content-image"><img src="image/welcome.jpg" alt="PICTURE"></div>
+        </div>
+    </main>
+    <h1>The Fastest and Easiest way to be a Graduate Software Engineer in Sri Lanka</h1>
+
+    <div id="main2">
+        <a href="http://blog.ijse.lk/web/blog/?p=613" target="blank"><img src="image/1.jpg" alt="PICTURE"></a>
+        <a href="http://blog.ijse.lk/web/blog/?p=594" target="blank"><img src="image/2.jpg" alt="PICTURE"></a>
+        <a href="http://blog.ijse.lk/web/blog/?p=588" target="blank"><img src="image/3.jpg" alt="PICTURE"></a>
+        <a href="http://blog.ijse.lk/web/blog/?p=577" target="blank"><img src="image/4.jpg" alt="PICTURE"></a>
+        <a href="http://blog.ijse.lk/web/blog/?p=570" target="blank"><img src="image/5.jpg" alt="PICTURE"></a>
+        <a href="http://blog.ijse.lk/web/blog/?p=562" target="blank"><img src="image/6.jpg" alt="PICTURE"></a>
+    </div>
+    <footer>
+        <div>
+            <p>Panadura Branch</p>
+            <p>PHONE</p>
+            <p>+94 912 248 460</p>
+            <p>+94 711 303 303</p>
+            <p>+94 711 202 202</p>
+            <p> &#xf3c5 ADDRESS</p>
+            <p>#223A 1/2, Galle Road, Panadura.</p>
+            
+        </div>
+        <div>
+            <p>Galle Branch</p>
+            <p>PHONE</p>
+            <p>+94 38 2222 800</p>
+            <p>+94 38 2244 855</p>
+            <p> &#xf3c5 ADDRESS</p>
+            <p>#126, Colombo - Galle Main Road, Galle.</p>
+        </div>
+    
+    </footer>
+    <img id="img-call" src="image/call.png" alt="PICTURE">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
