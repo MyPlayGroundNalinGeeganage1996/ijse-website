@@ -175,13 +175,43 @@
             color: gray;
             padding: 10px;
         }
-        #img-call{
+        #image-call{
+            /* background-color: blue; */
             position: fixed;
             width: 75px;
+            height: 75px;
             bottom: 50px;
             right: 20px;
+
+        }
+        #image-call::after{
+            display: block;
+            content: "";
+            position: absolute;
+            background-color: red;
+            top: 0%;
+            left: 0%;
+            width: 75px;
+            height: 75px;
+            opacity: 0.3;
+            border-radius: 100%;
+            z-index: -1;
+
+            transition-property: transform;
+            transition-duration: 500ms;
+            transition-timing-function: ease-in-out;
+
+        }
+        #img-call{
+            width: 75px;
+            bottom: 50px;
             border-radius: 100px;
         }
+        #image-call:hover::after{
+            transform: scale(1.5);
+        }
+
+
         h1{
             font-size: 1.6rem;
             font-weight: bold;
@@ -193,6 +223,7 @@
             background-color: rgb(128,0,0);
         }
         #main2 img{
+            /* position: absolute; */
             width: 350px;
             height: 300px;
             margin: 30px;
@@ -200,7 +231,7 @@
         }
         #main2 img:hover{
             border: 2px solid yellow;
-            display: -moz-popup;
+            
         }
 
         footer div{
@@ -336,7 +367,7 @@
         </div>
     
     </footer>
-    <img id="img-call" src="image/call.png" alt="PICTURE">
+    <div id="image-call"><img id="img-call" src="image/call.png" alt="PICTURE"></div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
